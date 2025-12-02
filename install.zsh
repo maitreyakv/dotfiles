@@ -6,6 +6,22 @@
 
 set -euo pipefail
 
+check_cmd_exists() {
+  echo -n "checking for $1..."
+  if ! command -v $1 > /dev/null; then
+    echo "missing!"
+    echo "error: command $1 not found!"
+    exit 1
+  fi
+  echo "found"
+}
+
+check_cmd_exists curl
+check_cmd_exists git
+check_cmd_exists tar
+
+# TODO: configure tmux
+
 # starship prompt
 if [[ ! -n "${XDG_BIN_HOME}" ]]; then
   echo "error: XDG_BIN_HOME should be set!"
