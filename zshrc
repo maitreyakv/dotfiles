@@ -15,5 +15,10 @@ antidote load
 eval "$(starship init zsh)"
 
 # neovim
-export EDITOR="${HOME}/.neovim/bin/nvim"
+export EDITOR="${HOME}/nvim-linux-x86_64/bin/nvim"
 alias vim="${EDITOR}"
+
+# Node Version Manager (NodeJs)
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
