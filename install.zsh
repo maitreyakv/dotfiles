@@ -19,7 +19,7 @@ fi
 # zsh
 cp ./zshrc "${HOME}/.zshrc"
 rm -rf "${HOME}/.antidote"
-git -c advice.detachedHead=false clone --depth=1 --branch="v1.9.10" \
+git -c advice.detachedHead=false clone --depth=1 --branch="v1.9.10" --quiet \
   https://github.com/mattmc3/antidote.git "${HOME}/.antidote"
 cp ./zsh_plugins.txt "${HOME}/.zsh_plugins.txt"
 
@@ -27,10 +27,10 @@ cp ./zsh_plugins.txt "${HOME}/.zsh_plugins.txt"
 rm -rf "${XDG_CONFIG_HOME}/nvim"
 cp -r ./config/nvim "${XDG_CONFIG_HOME}/nvim"
 pushd "${HOME}"
-curl -L https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz > neovim.tar.gz
-tar -xvzf neovim.tar.gz
+curl -sL https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz > neovim.tar.gz
+tar -xzf neovim.tar.gz
 rm -rf neovim.tar.gz
 popd
 
 # starship
-curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir="${XDG_BIN_HOME}"
+curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir="${XDG_BIN_HOME}" > /dev/null
