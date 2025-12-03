@@ -30,27 +30,43 @@ if [[ ! -n "${XDG_CONFIG_HOME}" ]]; then
 fi
 
 # zsh
+echo -n "configuring zsh..."
 cp ./zshrc "${HOME}/.zshrc"
 rm -rf "${HOME}/.antidote"
 git -c advice.detachedHead=false clone --branch="v1.9.10" --quiet \
   https://github.com/mattmc3/antidote.git "${HOME}/.antidote"
 cp ./zsh_plugins.txt "${HOME}/.zsh_plugins.txt"
+echo "done"
 
 # tmux
+echo -n "installing tmux..."
+rm -rf "${HOME}/.tmux/plugins/tpm"
+git -c advice.detachedHead=false clone --depth=1 -b "v3.1.0" --quiet \
+  https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
+rm -rf "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin"
+mkdir -p "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin"
+git -c advice.detachedHead=false clone -b "v2.1.3" --quiet \
+  https://github.com/catppuccin/tmux.git "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin/tmux"
+echo "done"
+echo -n "configuring tmux..."
 rm -rf "${XDG_CONFIG_HOME}/tmux"
 cp -r ./config/tmux "${XDG_CONFIG_HOME}/tmux"
-rm -rf "${HOME}/.tmux/plugins/tpm"
-git -c advice.detachedHead=false clone --depth=1 --branch="v3.1.0" --quiet \
-  https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
+echo "done"
 
 # neovim
-rm -rf "${XDG_CONFIG_HOME}/nvim"
-cp -r ./config/nvim "${XDG_CONFIG_HOME}/nvim"
+echo -n "installing neovim..."
 pushd "${HOME}"
 curl -sL https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz > neovim.tar.gz
 tar -xzf neovim.tar.gz
 rm -rf neovim.tar.gz
 popd
+echo "done"
+echo -n "configuring neovim..."
+rm -rf "${XDG_CONFIG_HOME}/nvim"
+cp -r ./config/nvim "${XDG_CONFIG_HOME}/nvim"
+echo "done"
 
 # starship
+echo -n "installing starship..."
 curl -sS https://starship.rs/install.sh | sh -s -- --yes --bin-dir="${XDG_BIN_HOME}" > /dev/null
+echo "done"
