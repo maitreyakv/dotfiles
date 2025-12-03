@@ -39,7 +39,9 @@ cp ./zsh_plugins.txt "${HOME}/.zsh_plugins.txt"
 echo "done"
 
 # tmux
-echo -n "installing tmux..."
+echo -n "configuring tmux..."
+rm -rf "${XDG_CONFIG_HOME}/tmux"
+cp -r ./config/tmux "${XDG_CONFIG_HOME}/tmux"
 rm -rf "${HOME}/.tmux/plugins/tpm"
 git -c advice.detachedHead=false clone --depth=1 -b "v3.1.0" --quiet \
   https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
@@ -47,10 +49,6 @@ rm -rf "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin"
 mkdir -p "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin"
 git -c advice.detachedHead=false clone -b "v2.1.3" --quiet \
   https://github.com/catppuccin/tmux.git "${XDG_CONFIG_HOME}/tmux/plugins/catppuccin/tmux"
-echo "done"
-echo -n "configuring tmux..."
-rm -rf "${XDG_CONFIG_HOME}/tmux"
-cp -r ./config/tmux "${XDG_CONFIG_HOME}/tmux"
 echo "done"
 
 # neovim
