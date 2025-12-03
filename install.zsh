@@ -6,6 +6,7 @@
 
 set -euo pipefail
 
+# checks
 check_cmd_exists() {
   echo -n "checking for $1..."
   if ! command -v $1 > /dev/null; then
@@ -15,14 +16,10 @@ check_cmd_exists() {
   fi
   echo "found"
 }
-
 check_cmd_exists curl
 check_cmd_exists git
 check_cmd_exists tar
 
-# TODO: configure tmux
-
-# starship prompt
 if [[ ! -n "${XDG_BIN_HOME}" ]]; then
   echo "error: XDG_BIN_HOME should be set!"
   exit 1
@@ -35,9 +32,16 @@ fi
 # zsh
 cp ./zshrc "${HOME}/.zshrc"
 rm -rf "${HOME}/.antidote"
-git -c advice.detachedHead=false clone --depth=1 --branch="v1.9.10" --quiet \
+git -c advice.detachedHead=false clone --branch="v1.9.10" --quiet \
   https://github.com/mattmc3/antidote.git "${HOME}/.antidote"
 cp ./zsh_plugins.txt "${HOME}/.zsh_plugins.txt"
+
+# tmux
+rm -rf "${XDG_CONFIG_HOME}/tmux"
+cp -r ./config/tmux "${XDG_CONFIG_HOME}/tmux"
+rm -rf "${HOME}/.tmux/plugins/tpm"
+git -c advice.detachedHead=false clone --depth=1 --branch="v3.1.0" --quiet \
+  https://github.com/tmux-plugins/tpm "${HOME}/.tmux/plugins/tpm"
 
 # neovim
 rm -rf "${XDG_CONFIG_HOME}/nvim"
