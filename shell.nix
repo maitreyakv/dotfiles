@@ -10,6 +10,7 @@ pkgs.mkShellNoCC {
     neovim
     starship
     tmux
+    vivid
     zsh
   ];
 
