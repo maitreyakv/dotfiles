@@ -3,7 +3,8 @@
 # Machine specific configuration is in ~/.zshenv
 
 # initialize antidote plugin manager
-ANTIDOTE_ZSH_PATH="${HOME}/.antidote/antidote.zsh"
+# TODO: Figure out how to infer this path
+ANTIDOTE_ZSH_PATH="/nix/store/b10clyb3w8k7d57w382qffr4xl2h8gvk-antidote-1.9.10/share/antidote/antidote.zsh"
 if [[ ! -f "${ANTIDOTE_ZSH_PATH}" ]]; then
   echo "error: antidote not found at ${ANTIDOTE_ZSH_PATH}!"
   return

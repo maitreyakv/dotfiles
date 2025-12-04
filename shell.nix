@@ -4,6 +4,7 @@ let
 in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
+    antidote
     curl
     git
     neovim
@@ -12,4 +13,5 @@ pkgs.mkShellNoCC {
     zsh
   ];
 
+  shellHook = "zsh";
 }
