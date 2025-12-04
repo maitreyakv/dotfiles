@@ -15,8 +15,8 @@ antidote load
 eval "$(starship init zsh)"
 
 # neovim
-export EDITOR="${HOME}/nvim-linux-x86_64/bin/nvim"
-alias vim="${EDITOR}"
+export EDITOR="nvim"
+alias vim="nvim"
 
 # Node Version Manager (NodeJs)
 export NVM_DIR="$HOME/.nvm"

@@ -52,13 +52,6 @@ git -c advice.detachedHead=false clone -b "v2.1.3" --quiet \
 echo "done"
 
 # neovim
-echo -n "installing neovim..."
-pushd "${HOME}"
-curl -sL https://github.com/neovim/neovim/releases/download/v0.11.5/nvim-linux-x86_64.tar.gz > neovim.tar.gz
-tar -xzf neovim.tar.gz
-rm -rf neovim.tar.gz
-popd
-echo "done"
 echo -n "configuring neovim..."
 rm -rf "${XDG_CONFIG_HOME}/nvim"
 cp -r ./config/nvim "${XDG_CONFIG_HOME}/nvim"
