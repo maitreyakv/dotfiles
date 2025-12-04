@@ -7,7 +7,9 @@ pkgs.mkShellNoCC {
     curl
     git
     neovim
+    starship
     tmux
+    zsh
   ];
 
 }
