@@ -9,7 +9,7 @@ My personal configuration files
 
 1. Bootstrap NixOS config 
 ```bash
-nix-shell -p git --command "git clone https://github.com/maitreyakv/dotfiles .dotfiles"
+nix-shell -p git --run "git clone https://github.com/maitreyakv/dotfiles .dotfiles"
 ```
 
 2. Setup config files 
