@@ -1,8 +1,7 @@
-all:
+all: home-config nixos-config
+
+home-config:
 	nix-shell -p stow --run "stow -v home"
 
-test:
-	nix-shell -p stow --run "stow -v --simulate home"
-
-clean: 
-	nix-shell -p stow --run "stow -v --delete home"
+nixos-config:
+	sudo nix-shell -p stow --run "stow -v -d etc/nixos/ -t /etc/nixos/ ."

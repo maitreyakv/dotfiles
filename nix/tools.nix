@@ -9,6 +9,7 @@ with pkgs; [
   clang
   curl
   git
+  gnumake
   neovim
   nodejs_24
   starship
