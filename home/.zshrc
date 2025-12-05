@@ -41,3 +41,9 @@ eval "$(starship init zsh)"
 # neovim
 export EDITOR="nvim"
 alias vim="nvim"
+
+# git configuration
+export GIT_AUTHOR_NAME="Maitreya Venkataswamy"
+export GIT_AUTHOR_EMAIL="maitreyakv@gmail.com"
+export GIT_COMMITTER_NAME="Maitreya Venkataswamy"
+export GIT_COMMITTER_EMAIL="maitreyakv@gmail.com"
