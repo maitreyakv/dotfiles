@@ -1,8 +1,8 @@
 all:
-	nix-shell -p stow --command "stow -v ."
+	nix-shell -p stow --run "stow -v home"
 
 test:
-	nix-shell -p stow --command "stow -v --simulate ."
+	nix-shell -p stow --run "stow -v --simulate home"
 
 clean: 
-	nix-shell -p stow --command "stow -v --delete ."
+	nix-shell -p stow --run "stow -v --delete home"
