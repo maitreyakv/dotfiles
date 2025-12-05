@@ -5,7 +5,6 @@ in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
     antidote
-    busybox
     cargo
     clang
     curl
@@ -14,6 +13,7 @@ pkgs.mkShellNoCC {
     nodejs_24
     starship
     tmux
+    unzip
     vivid
     zsh
   ];
