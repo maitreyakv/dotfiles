@@ -85,6 +85,23 @@
     packages = [] ++ import ../../nix/tools.nix;
   };
 
+  # fonts
+  fonts.packages = with pkgs; [
+    nerd-fonts.jetbrains-mono
+  ];
+
+  # GNOME configuration
+  programs.dconf.profiles.user.databases = [
+    {
+      lockAll = true; # prevents overriding
+      settings = {
+        "org/gnome/desktop/interface" = {
+          monospace-font-name = "JetBrainsMono Nerd Font";
+        };
+      };
+    }
+  ];
+
   # Install firefox.
   programs.firefox.enable = true;
 
