@@ -14,7 +14,7 @@ nix-shell -p git --run "git clone https://github.com/maitreyakv/dotfiles .dotfil
 
 2. Setup config files 
 ```bash
-cd .dotfiles && make
+cd .dotfiles && nix-shell -p gnumake --run make
 ```
 
 ## Usage
