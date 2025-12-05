@@ -5,9 +5,13 @@ in
 pkgs.mkShellNoCC {
   packages = with pkgs; [
     antidote
+    busybox
+    cargo
+    clang
     curl
     git
     neovim
+    nodejs_24
     starship
     tmux
     vivid
