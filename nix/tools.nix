@@ -13,6 +13,7 @@ with pkgs; [
   gnumake
   neovim
   nodejs_24
+  ripgrep
   starship
   tmux
   unzip
