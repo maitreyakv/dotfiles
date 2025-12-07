@@ -87,6 +87,7 @@
     isNormalUser = true;
     description = "Maitreya";
     extraGroups = [ "networkmanager" "wheel" ];
+    shell = pkgs.zsh;
     packages = [] 
       ++ import ../../nix/tools.nix { inherit pkgs; }
       ++ import ../../nix/apps.nix { inherit pkgs; };
@@ -108,6 +109,9 @@
       };
     }
   ];
+
+  # Install ZSH
+  programs.zsh.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
