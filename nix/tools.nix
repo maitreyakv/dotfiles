@@ -14,6 +14,7 @@ with pkgs; [
   neovim
   nodejs_24
   openssl
+  postgresql
   ripgrep
   starship
   tmux
