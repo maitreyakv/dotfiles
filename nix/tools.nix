@@ -3,6 +3,7 @@
 with pkgs; [
   alacritty
   antidote
+  btop
   cargo
   clang
   curl
