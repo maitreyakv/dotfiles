@@ -8,10 +8,12 @@ with pkgs; [
   cargo
   clang
   curl
+  dbeaver-bin
   git
   gnumake
   neovim
   nodejs_24
+  openssl
   ripgrep
   starship
   tmux
