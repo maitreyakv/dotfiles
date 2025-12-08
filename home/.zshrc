@@ -3,7 +3,7 @@
 # Machine specific configuration is in ~/.zshenv
 
 # ls, tree, etc. coloring
-export LS_COLORS="$(vivid generate catppuccin-mocha)"
+export LS_COLORS="$(vivid generate catppuccin-macchiato)"
 
 # History file for zsh
 HISTFILE="${HOME}/.zsh_history"
