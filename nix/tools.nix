@@ -3,6 +3,7 @@
 with pkgs; [
   alacritty
   antidote
+  awscli
   btop
   cargo
   clang
