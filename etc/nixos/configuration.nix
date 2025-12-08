@@ -93,7 +93,7 @@ in
   users.users.maitreya = {
     isNormalUser = true;
     description = "Maitreya";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     shell = pkgs.zsh;
     packages = [] 
       ++ import ../../nix/tools.nix { inherit pkgs; }
@@ -137,6 +137,9 @@ in
       };
     }
   ];
+
+  # docker
+  virtualisation.docker.enable = true;
 
   # Install ZSH
   programs.zsh.enable = true;
