@@ -4,6 +4,13 @@
 
 { _config, pkgs, lib, ... }:
 
+let
+  # TODO: deduplicate w/ nix/apps.nix
+  ckb-next-custom = pkgs.ckb-next.overrideAttrs (final: prev: {
+    cmakeFlags = prev.cmakeFlags ++ [ "-DUSE_DBUS_MENU=0" ];
+  });
+in
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -102,6 +109,15 @@
       RemainAfterExit = true;
       ExecStart = "${pkgs.bash}/bin/bash -c 'test -f $HOME/.ssh/id_rsa || ${pkgs.openssh}/bin/ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa'";
       User = "maitreya";
+    };
+  };
+
+  # ckb-next for corsair keyboard lights
+  systemd.services.ckb-next-daemon = {
+    enable = true;
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      ExecStart = "${ckb-next-custom}/bin/ckb-next-daemon";
     };
   };
 
