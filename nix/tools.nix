@@ -1,6 +1,7 @@
 # Group of packages that I use for development (e.g. tmux, git, nvim, zsh, etc.)
 { pkgs, ... }:
 with pkgs; [
+  alacritty
   antidote
   cargo
   clang
