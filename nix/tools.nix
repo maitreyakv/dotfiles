@@ -15,6 +15,7 @@ with pkgs; [
   ripgrep
   starship
   tmux
+  tree
   unzip
   vivid
   zsh
