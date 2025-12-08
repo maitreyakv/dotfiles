@@ -93,6 +93,18 @@
       ++ import ../../nix/apps.nix { inherit pkgs; };
   };
 
+  # Use a one-shot systemd service to create SSH key
+  systemd.services.generateSshKey = {
+    description = "Generate RSA SSH Key";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+      ExecStart = "${pkgs.bash}/bin/bash -c 'test -f $HOME/.ssh/id_rsa || ${pkgs.openssh}/bin/ssh-keygen -t rsa -b 4096 -f $HOME/.ssh/id_rsa'";
+      User = "maitreya";
+    };
+  };
+
   # fonts
   fonts.packages = with pkgs; [
     nerd-fonts.jetbrains-mono
