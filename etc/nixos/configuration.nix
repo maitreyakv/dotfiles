@@ -149,7 +149,9 @@ in
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = [];
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.pop-shell
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
