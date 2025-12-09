@@ -22,6 +22,7 @@ with pkgs; [
   tree
   unzip
   vivid
+  yarn
   zsh
 ]
 
