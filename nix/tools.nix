@@ -10,6 +10,7 @@ with pkgs; [
   curl
   dbeaver-bin
   git
+  glow
   gnumake
   neovim
   nodejs_24
