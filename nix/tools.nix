@@ -15,6 +15,7 @@ with pkgs; [
   neovim
   nodejs_24
   openssl
+  opentofu
   postgresql
   ripgrep
   starship
@@ -22,6 +23,7 @@ with pkgs; [
   tree
   unzip
   vivid
+  wl-clipboard
   yarn
   zsh
 ]
