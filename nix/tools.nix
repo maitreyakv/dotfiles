@@ -12,6 +12,7 @@ with pkgs; [
   git
   glow
   gnumake
+  just
   neovim
   nodejs_24
   openssl
