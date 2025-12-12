@@ -9,6 +9,7 @@ with pkgs; [
   clang
   curl
   dbeaver-bin
+  gh
   git
   glow
   gnumake
