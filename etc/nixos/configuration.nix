@@ -147,6 +147,10 @@ in
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Fix for uv dynamically-linked Python
+  # https://nixos.org/manual/nixpkgs/unstable/#sec-uv
+  programs.nix-ld.enable = true;
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [

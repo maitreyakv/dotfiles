@@ -24,6 +24,7 @@ with pkgs; [
   tmux
   tree
   unzip
+  uv
   vivid
   wl-clipboard
   yarn
