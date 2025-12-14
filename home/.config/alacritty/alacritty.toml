@@ -9,4 +9,5 @@ TERM = "xterm-256color" # Sets full colors in terminal
 [keyboard]
 bindings = [
   { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+  { key = "F11", mods = "None", action = "ToggleFullscreen" },
 ]
