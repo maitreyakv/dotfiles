@@ -4,6 +4,7 @@ with pkgs; [
   alacritty
   antidote
   awscli2
+  bat
   btop
   cargo
   clang
