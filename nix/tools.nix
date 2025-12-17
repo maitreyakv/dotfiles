@@ -20,6 +20,7 @@ with pkgs; [
   openssl
   opentofu
   postgresql
+  postgresql.pg_config
   ripgrep
   starship
   tmux
