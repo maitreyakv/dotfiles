@@ -25,6 +25,7 @@ with pkgs; [
   starship
   tmux
   tree
+  unixtools.netstat
   unzip
   uv
   vivid
