@@ -17,8 +17,10 @@ with pkgs; [
   just
   neovim
   nodejs_24
+  openai
   openssl
   opentofu
+  oxker
   postgresql
   postgresql.pg_config
   ripgrep
