@@ -14,6 +14,7 @@ with pkgs; [
   git
   glow
   gnumake
+  jq
   just
   neovim
   nodejs_24
