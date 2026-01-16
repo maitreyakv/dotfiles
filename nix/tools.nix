@@ -10,12 +10,14 @@ with pkgs; [
   clang
   curl
   dbeaver-bin
+  entr
   gh
   git
   glow
   gnumake
   jq
   just
+  mermaid-cli
   neovim
   nodejs_24
   openai
