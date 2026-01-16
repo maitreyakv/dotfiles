@@ -15,6 +15,7 @@ with pkgs; [
   git
   glow
   gnumake
+  imgcat
   jq
   just
   mermaid-cli
