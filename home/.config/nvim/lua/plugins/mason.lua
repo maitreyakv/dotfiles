@@ -1,13 +1,12 @@
 return {
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   dependencies = {
-    "williamboman/mason-lspconfig.nvim",
+    "mason-org/mason-lspconfig.nvim",
   },
   config = function()
     require("mason").setup()
     require("mason-lspconfig").setup({
-      -- TODO: configure ltex_plus to work with code comments
-      ensure_installed = { "tofu_ls", "ltex_plus" },
+      ensure_installed = { "tofu_ls", "ltex_plus", "prettierd", "prettier" },
     })
   end,
 }
