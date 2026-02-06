@@ -9,6 +9,8 @@ let
   ckb-next-custom = pkgs.ckb-next.overrideAttrs (final: prev: {
     cmakeFlags = prev.cmakeFlags ++ [ "-DUSE_DBUS_MENU=0" ];
   });
+
+  addNatalia = (builtins.getEnv "ADD_NATALIA") == "1";
 in
 
 {
@@ -101,6 +103,13 @@ in
     packages = [] 
       ++ import ../../nix/tools.nix { inherit pkgs; }
       ++ import ../../nix/apps.nix { inherit pkgs; };
+  };
+
+  # Natalia's account for home machine
+  users.users.natalia = lib.mkIf addNatalia {
+    isNormalUser = true;
+    description = "Natalia";
+    shell = pkgs.zsh;
   };
 
   # Use a one-shot systemd service to create SSH key
