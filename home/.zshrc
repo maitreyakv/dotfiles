@@ -47,3 +47,8 @@ export GIT_AUTHOR_NAME="Maitreya Venkataswamy"
 export GIT_AUTHOR_EMAIL="maitreyakv@gmail.com"
 export GIT_COMMITTER_NAME="Maitreya Venkataswamy"
 export GIT_COMMITTER_EMAIL="maitreyakv@gmail.com"
+
+# user-defined aliases
+dstpall() {
+  docker stop $(docker ps -q)
+}
