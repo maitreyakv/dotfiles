@@ -27,6 +27,7 @@ with pkgs; [
   oxker
   postgresql
   postgresql.pg_config
+  pulumi
   ripgrep
   starship
   tmux
