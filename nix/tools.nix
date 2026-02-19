@@ -28,6 +28,7 @@ with pkgs; [
   postgresql
   postgresql.pg_config
   pulumi
+  pulumiPackages.pulumi-python
   ripgrep
   starship
   tmux
