@@ -18,6 +18,7 @@ with pkgs; [
   imgcat
   jq
   just
+  kubectl
   mermaid-cli
   neovim
   nodejs_24
