@@ -18,6 +18,7 @@ with pkgs; [
   imgcat
   jq
   just
+  k9s
   kubectl
   mermaid-cli
   neovim
