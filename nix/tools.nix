@@ -32,6 +32,7 @@ with pkgs; [
   pulumi
   pulumiPackages.pulumi-python
   ripgrep
+  shellcheck
   starship
   tmux
   tree
