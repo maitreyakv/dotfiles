@@ -40,6 +40,7 @@ with pkgs; [
   unzip
   uv
   vivid
+  wget
   wl-clipboard
   yarn
   zsh
