@@ -52,3 +52,4 @@ export GIT_COMMITTER_EMAIL="maitreyakv@gmail.com"
 dstpall() {
   docker stop $(docker ps -q)
 }
+alias grpo="gr prune origin"
