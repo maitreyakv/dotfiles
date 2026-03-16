@@ -5,3 +5,4 @@
 vim.keymap.set("n", ";", ":", { noremap = true })
 vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<Cr>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<Cr>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>h", require("snacks.dashboard").open, { desc = "Open mini starter" })
