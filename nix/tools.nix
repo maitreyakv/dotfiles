@@ -10,6 +10,7 @@ with pkgs; [
   clang
   curl
   dbeaver-bin
+  dnsutils
   entr
   gh
   git
