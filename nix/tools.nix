@@ -21,6 +21,7 @@ with pkgs; [
   just
   k9s
   kubectl
+  kubernetes-helm
   mermaid-cli
   neovim
   nodejs_24
