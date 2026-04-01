@@ -33,6 +33,7 @@ with pkgs; [
   postgresql.pg_config
   pulumi
   pulumiPackages.pulumi-python
+  redis
   ripgrep
   shellcheck
   starship
