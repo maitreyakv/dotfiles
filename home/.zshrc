@@ -53,3 +53,4 @@ dstpall() {
   docker stop $(docker ps -q)
 }
 alias grpo="gr prune origin"
+alias tree="tree -I __pycache__"
