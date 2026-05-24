@@ -6,7 +6,6 @@ with pkgs; [
   awscli2
   bat
   btop
-  cargo
   clang
   curl
   dbeaver-bin
@@ -35,6 +34,7 @@ with pkgs; [
   pulumiPackages.pulumi-python
   redis
   ripgrep
+  rustup
   shellcheck
   starship
   tmux
