@@ -167,7 +167,19 @@ in
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     gnomeExtensions.pop-shell
+    gnome-network-displays
   ];
+
+  # Required for Miracast support in GNOME Network Displays
+  xdg.portal.enable = true;
+  xdg.portal.xdgOpenUsePortal = true;
+  xdg.portal.extraPortals = [
+    pkgs.xdg-desktop-portal-gnome
+    pkgs.xdg-desktop-portal-wlr
+  ];
+  networking.firewall.trustedInterfaces = [ "p2p-wl+" ];
+  networking.firewall.allowedTCPPorts = [ 7236 7250 ];
+  networking.firewall.allowedUDPPorts = [ 7236 5353 ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
