@@ -37,6 +37,7 @@ with pkgs; [
   rustup
   shellcheck
   starship
+  stu
   tmux
   tree
   unixtools.netstat
