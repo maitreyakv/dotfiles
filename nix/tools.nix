@@ -16,6 +16,7 @@ with pkgs; [
   glow
   gnumake
   imgcat
+  jdk
   jq
   just
   k9s

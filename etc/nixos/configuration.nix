@@ -150,6 +150,10 @@ in
     }
   ];
 
+  # JAVA install
+  programs.java.enable = true;
+  programs.java.package = pkgs.jdk;
+
   # docker
   virtualisation.docker.enable = true;
 
