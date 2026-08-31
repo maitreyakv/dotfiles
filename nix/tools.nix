@@ -15,6 +15,7 @@ with pkgs; [
   git
   glow
   gnumake
+  google-cloud-sdk
   imgcat
   jdk
   jq
