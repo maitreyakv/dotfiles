@@ -42,6 +42,9 @@ eval "$(starship init zsh)"
 export EDITOR="nvim"
 alias vim="nvim"
 
+# Cargo
+export PATH="$HOME/.cargo/bin:${PATH}"
+
 # git configuration
 export GIT_AUTHOR_NAME="Maitreya Venkataswamy"
 export GIT_AUTHOR_EMAIL="maitreyakv@gmail.com"
