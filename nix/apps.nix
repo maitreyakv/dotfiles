@@ -8,6 +8,7 @@ let
 in
 with pkgs; [
   ckb-next-custom
+  rpi-imager
   slack
 ]
 
