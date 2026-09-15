@@ -32,6 +32,7 @@ with pkgs; [
   oxker
   postgresql
   postgresql.pg_config
+  protobuf
   pulumi
   pulumiPackages.pulumi-python
   redis
