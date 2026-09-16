@@ -105,6 +105,17 @@ in
       ++ import ../../nix/apps.nix { inherit pkgs; };
   };
 
+  # TODO: Fix Redshift?
+
+  # Provide geographic location
+  location.provider = "manual";
+  location.latitude = 42.37;
+  location.longitude = 71.19;
+
+  # Enable Redshift for nice lighting in the evening
+  services.redshift.enable = true;
+  services.redshift.temperature.night = 1000;
+
   # Natalia's account for home machine
   users.users.natalia = lib.mkIf addNatalia {
     isNormalUser = true;
