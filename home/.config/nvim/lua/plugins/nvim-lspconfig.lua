@@ -4,6 +4,7 @@ return {
   -- https://github.com/LazyVim/starter/issues/161
   lazy = false,
   opts = {
+    inlay_hints = { enabled = false },
     servers = {
       ["tofu-ls"] = {
         cmd = { "tofu-ls" },
