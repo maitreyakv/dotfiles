@@ -57,3 +57,6 @@ dstpall() {
 }
 alias grpo="gr prune origin"
 alias tree="tree -I __pycache__"
+
+# Make curl library available to compilers
+export C_INCLUDE_PATH="$(nix-build '<nixpkgs>' -A curl.dev --no-out-link)/include${C_INCLUDE_PATH:+:$C_INCLUDE_PATH}"

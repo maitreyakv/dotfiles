@@ -8,7 +8,7 @@ with pkgs; [
   btop
   clang
   cmake
-  curl
+  curl.dev
   dbeaver-bin
   dnsutils
   entr
