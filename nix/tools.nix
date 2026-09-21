@@ -7,6 +7,7 @@ with pkgs; [
   bat
   btop
   clang
+  cmake
   curl
   dbeaver-bin
   dnsutils
