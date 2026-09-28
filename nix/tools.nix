@@ -44,6 +44,7 @@ with pkgs; [
   stu
   tmux
   tree
+  trino-cli
   unixtools.netstat
   unzip
   uv
