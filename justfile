@@ -6,3 +6,6 @@ rebuild-home:
 
 rebuild-work:
   sudo nixos-rebuild switch
+
+clean:
+  sudo nix-collect-garbage -d && sudo nix-store --optimise
