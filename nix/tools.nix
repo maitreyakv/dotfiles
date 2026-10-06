@@ -41,6 +41,7 @@ with pkgs; [
   rustup
   shellcheck
   starship
+  stow
   stu
   tmux
   tree
