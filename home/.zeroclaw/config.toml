@@ -7,6 +7,10 @@ requires_openai_auth = true
 model_provider = "openai.codex"
 risk_profile = "readonly"
 
+[agents.default.workspace]
+path = "/home/maitreya/code"
+unrestricted_filesystem = false
+
 [risk_profiles.readonly]
 level = "readonly"
 allowed_tools = [
