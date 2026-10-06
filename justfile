@@ -15,4 +15,6 @@ stow:
   stow --target="$HOME" home
 
 clean:
-  sudo nix-collect-garbage -d && sudo nix-store --optimise
+  sudo nix-collect-garbage -d \
+    && nix-collect-garbage -d \
+    && sudo nix-store --optimise
