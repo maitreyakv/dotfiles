@@ -60,3 +60,10 @@ alias tree="tree -I __pycache__"
 
 # Make curl library available to compilers
 export C_INCLUDE_PATH="$(nix-build '<nixpkgs>' -A curl.dev --no-out-link)/include${C_INCLUDE_PATH:+:$C_INCLUDE_PATH}"
+
+# >>> zeroclaw >>>
+export PATH="/home/maitreya/.cargo/bin:$PATH"
+# <<< zeroclaw <<<
+
+# ZeroClaw
+alias zc="zeroclaw agent -a default --model-provider openai-codex --model gpt-6-astra"

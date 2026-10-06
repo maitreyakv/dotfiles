@@ -1,0 +1,17 @@
+[providers.models.openai.codex]
+model = "gpt-6-astra"
+wire_api = "responses"
+requires_openai_auth = true
+
+[agents.default]
+model_provider = "openai.codex"
+risk_profile = "readonly"
+
+[risk_profiles.readonly]
+level = "readonly"
+allowed_tools = [
+  "file_read",
+  "file_list",
+  "glob_search",
+  "content_search",
+]

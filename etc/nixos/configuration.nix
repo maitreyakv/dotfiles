@@ -174,6 +174,12 @@ in
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Allow OpenClaw install
+  nixpkgs.config.permittedInsecurePackages = [
+    "openclaw-2026.5.7"
+  ];
+
+
   # Fix for uv dynamically-linked Python
   # https://nixos.org/manual/nixpkgs/unstable/#sec-uv
   programs.nix-ld.enable = true;
