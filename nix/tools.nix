@@ -1,6 +1,7 @@
 # Group of packages that I use for development (e.g. tmux, git, nvim, zsh, etc.)
 { pkgs, ... }:
 with pkgs; [
+  (google-cloud-sdk.withExtraComponents[google-cloud-sdk.components.gke-gcloud-auth-plugin])
   alacritty
   antidote
   awscli2
@@ -16,7 +17,7 @@ with pkgs; [
   git
   glow
   gnumake
-  (google-cloud-sdk.withExtraComponents[google-cloud-sdk.components.gke-gcloud-auth-plugin])
+  grc
   imgcat
   jdk
   jq
