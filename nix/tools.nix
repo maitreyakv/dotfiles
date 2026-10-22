@@ -45,6 +45,7 @@ with pkgs; [
   stow
   stu
   tmux
+  tmux-xpanes
   tree
   trino-cli
   unixtools.netstat
