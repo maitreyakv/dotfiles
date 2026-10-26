@@ -221,6 +221,12 @@ in
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
+  # Blacklist for exposed certificates
+  security.pki.caCertificateBlacklist = [
+    "Comodo AAA Services root"
+    "emSign ECC Root CA - G3"
+  ];
+
   # TODO: Figure out how to install latest version of pulumi
 
   # This value determines the NixOS release from which the default
