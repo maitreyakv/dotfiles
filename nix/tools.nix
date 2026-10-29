@@ -51,6 +51,7 @@ with pkgs; [
   unixtools.netstat
   unzip
   uv
+  vitejs
   vivid
   wget
   wl-clipboard
