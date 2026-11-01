@@ -41,6 +41,7 @@ with pkgs; [
   ripgrep
   rustup
   shellcheck
+  ssm-session-manager-plugin
   starship
   stow
   stu
